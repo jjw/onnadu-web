@@ -1,0 +1,15 @@
+test: 
+	python3 -m http.server
+	
+commit:
+	git add .
+	git commit -m 'latest updates'
+	
+push: 
+	eval "$(ssh-agent -s)"
+	ssh-add /home/jjw/.ssh/wm_github
+	git push ssh://git@ssh.github.com:443/jjw/onnadu-web
+	
+publish: commit push
+	
+
