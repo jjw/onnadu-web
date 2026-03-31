@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=860" />
+<meta property="og:image" content="https://michaeleskin.com/abctools/img/abc-icon.png" />
+
+<title>ABC Transcription Tools Generated Website</title>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #FFFFFF;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        margin: 0px auto;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 0px;
+        color: #000000;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-top: 18px;
+        margin-bottom: 24px;
+        color: #000000;
+    }
+
+    p {
+        color: #000000;
+    }
+
+    a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #000000;
+    }
+    a:link {
+        color: #000000;
+    }
+    a:visited {
+        color: #000000;
+    }
+    a:hover {
+        color: #000000;
+    }
+    a:active {
+        color: #000000;
+    }
+
+    #footer1{
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #000000;
+    }
+
+    #footer2{
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #000000;
+    }
+
+    ul{
+        list-style-type:none;
+        padding:0px;
+        text-align:center;
+    }
+    
+    li{
+        margin-bottom: 16px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="title">ABC Transcription Tools Generated Website</h1>
+        <h2 id="subtitle">Select a tune from the dropdown to load it into the frame below:</h2>
+        <hr style="margin-top:24px;margin-bottom:24px;width:500px;color:white;">
+        <div id="tuneShareLinkHolder"></div>
+    </div>
+
+    <script>
+
+    const tunes=[{"Name":"Willy Taylor's High Tea","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJyNjrFqwzAQhvd7in8xHdMIUYo2m4Ib2izF0G7mLNmOE0UKVlNw0cNXCU1LluBFOn333X_6UFhSpfA-WDuh4sn68S7geeg3qFqmN4WGR2fY6ZbWCnIh6TXNLB7pRaHc85YybvQ21MEfnem8-0Rnj4OhLFuvnlY4jL4feY_7C2g4hBP8J3rjR3ONTtKXt3iQV9IFsTE1W1sfLE8N611tB7cLVOZRFaLQKPJUFgJGoJUxnb3A-Rl1aiEXSH26pZYiLpHLdCdVRfFb912M1AozY0VSb5ppw1_mzMg5vz5nfosYfwBOYoYi&format=noten&ssp=10&name=Willy_Taylor's_High_Tea&play=1"},{"Name":"93 Not Out","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJyNjstOwzAQRff-irvpGnChAu9s0kQVFCTEgl3keJKQ1I2rPJCQ5uNxgApV6oLVlc6cOzNvSopXhbslnsKI52kULwptU4utwuriVjwqXMV4UEj2thULW7h2yIcwdVSFbkTlp4bEYrHdJBsc-lD3do_LIyjsMMzwj7j30NMpmqWP4LG6PpGOyBLl1vv84O1nYd0u9023GwQrzSRBcEazIQOdJpyl2Xeu5zT3LM4accraOJBULNzPlqokdpGVLroSBuQMa9JI1wmLTCKD0RmnEhq0ZKMNytiLHY26Kn8v_XeLjaqtOeooKX5ww_wFtb90uQ&format=noten&ssp=10&name=93_Not_Out&play=1"},{"Name":"The Great North Run","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJylzLFqwzAUheH9PsVdPKe9NaVok0gsQpsOIUM3cy3JdhJFCpJdKOjhmwxpydCp2-Hj53yIJ9gJ3I0OdXI84XtM04jbOcBWYMcpWA7GwUZgvajhTeDj4gVeBeoTH6Dizhxym-McbB_DhL2f9xaqarNervGc4pD4hA836DjnK_6KGWOy93SNPqPH5_ouuhFb27L37dnzV8fm2Pp9OGYoYklFkyZstGyKlsqgJUXFkXGXpalIJTWu6NLB36HSqkhqCDWJAj2VgdyAPdmfp39-fgPknWzt&format=noten&ssp=10&name=The_Great_North_Run&play=1"},{"Name":"Cherkessia Kfula","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJy9VG1r2zAQ_q5fcQRCv6xtrIYFDPmQF-qVLmNvjILnBFlSHC-yHSynpdAfvzslTuo6Wz-1BuvldHrudHfP3fke99hPf7LS5Vpbmwq4XW6NYD_8SWHSHD5tM31m4UHHNq30BwBJ4hVKL2SRAZyDXBWlsiBFDsLYAmINmzLNK61waYoHqFYabCXu9QX75nuXfOjxHpv5_JKzz7jvs1s_YF0Ryz92YYttrpZFXsHSbFPFut3ZzfQGAYukFBn0akEsrCXhUeLcaIpI6b4w8LHfUKpFQqmFMGaxMeIxFnK9wIetLfvle-yrP2KdoBOOVUQ_D0cygqcwGEfh9SgKp0HE4Qk6k04YyIh-TmqoITUuaaDjFoATIQgnFKcy7YQjFfXdclCvf7-N7ekL2-RLsLMdDOo1Pn3MCByBdog7cMRwgP_Edw7utQ5Pk07E6WwvIuO16hHn4MS4DsBbeTB45gIuGnHYTxGWAGd3V4jBvvjfNdaH1BA_QmxEvgasEg0iV3AHy1QbdYI9yIpZmhcl3OvSpkX-3mzKXAFTIbtNXfxIqxJr3-uBxwcAXbAbLda6fMmygQf0TYxAy7pqMwxDAzCSxdZWqYQx0qzFS6fyQqcTZCdzNm_UdfZKYbcwdjJX2vMDrw5kesapN7JOtprWnT9talFZtXPR-18mrlwmrs220ixJ-BIRNVdkREqu3E7TTiVc4BRzkeAk-udupGfHsTtJTt1KFNd0GfMzwjlw14K6C1D9uIC8RsTTcW0wcXCaivNWO8ia_WB4bAjv5EjdFLKTXUFrFz-pmlGPaScEp-DPlzxxUnrEMHbey7N97pR89V7S3w_RX0I0QLc&format=noten&ssp=10&name=Cherkessia_Kfula&play=1"},{"Name":"Walter Bulwer's Polka No. 1","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJx9km9r2zAQxt_rU9ybkA1KastO6wj2wkq3NFuTZk2hYzDCxfpjL4pt5KQjQx9-57IyssFe6JB-PM8dp7svIrkes0fxhO6gPcij-6H9sINV43YIy2YEMXsQ7csr4WwqHj2qEWg6Er0_wRSdQ1tizdZieItewbTxGt7X1lVdOYQWrYZxMmX3omdYK5aLZeMNpWRS_OOA-VouYXKdQZSN0zgDHsUwZl_F6uOtRmUa0vMoythCpJcpuxPxZcY-U0zfEWafxIwNcFt87zZdc6xJXx_AuGOl2GCwmN_MofWN9biH6BVsset6-IcUJVU5R73ouXFwlZ6JXhEqtaGP2LQOT1ssdhtX1buOBSGLoAqpwCYmaJ5zyBMZCpkXYBIdFJccJCcR-0vF81n4MMslFEqbYLnlYLkI1N8NZf3JA3JjoQ8BLd10SkYkkdGcKioNJg3sv6IrEb6xJ_GgC2pEKzC-2YOplHK0CGf7AG_WZdWqEvcX8Ht0b2F7IvNC--dTDSt3rHf6cIB4Mp5cgKycgzuaFll7MvoF1Ty9kQ&format=noten&ssp=10&name=Walter_Bulwer's_Polka_No._1&play=1"},{"Name":"The Fiery Clockface","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJx9jsFqwzAMhu9-CmHIeZs6ymroIWmaULbeetgtOJKdpnHjkqyDDj_8nEEZYbCT0KdP-vWuVitxUHA4GihaM9xg4zx1VpMRewXLhxfxpuApllcF-VmfRKJrOo3V6K89W99_gHXXlkWS7Hf5Di6DbwZ9hsc7qPU4TvCX0NEPPEeT9OkdLJ9n0h1p5ko7V12cvtWausq1fTeK-AhDACFzycg5bmNTYJliFuRGrgnXtMUiwhJTyJDCHzENspRZvCJTaZAinpQFfKEKIigzbVi0wMZOs1I2aA1yiDphFoMiJWSDzX9m9pM-O_4Nyi9rpQ&format=noten&ssp=10&name=The_Fiery_Clockface&play=1"},{"Name":"Walter Bulwer's Polka No. 2","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJx1j8FOg0AQhu_7FHMhXmyBKWniJh5A2E3VNpo00XghC2wtsmUJu0ia8PBStFEPPc3k-7_5k3mlPt6QLX0RysoWok71sr0y8KRVJWCj54Dkjd6LvII7cWjK-hr21jbUdfu-n-cTmh_kvKtcwv56Y8emrOVso62EbVfLTOuKOKCEsSCL0oK3mHk4Q89fkDVFNyCP1Hf9JXkeR3Dro0ceKAcH7F5CZzqhoJJH4ogs_zCp0V1d7HRtYae6siCOs17FK2ha_d6KA3hnkAljTvCX5HvdFv_RSfrUCpbBP-mMRFGkQqm0UeKYjR-mqqwrQ2LkCBwZH0JMEJJgYDxECKMQh2jKFgkMl7QYEzbwKQuADiTEEUYBwDBtLPgOE8bxh4xXlzXOkiFGNvae2r4AwMCGmQ&format=noten&ssp=10&name=Walter_Bulwer's_Polka_No._2&play=1"},{"Name":"Sussex Cotillion","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJyVjr1OwzAURnc_xV0yN1ysCnlLSGNV0AkGBqTI8U9I68ZV3CCQ8vD4ElVQNiTL_nR8fP29iDxfs2cBT1OM9gPuw7n3vg8D2wngK84eBdys7tiDAMky1ep9bGKYBuPCcAbnp96wLNttqy2cxtCN6gj5BbQqRoI_RL-F0Vwjkt6DhzW_ki5IGdMo75uTV5-t0ofG98Mhslm8MsnBcJihxKIESdsMGkuEAiWmXMuihuq2gpltONSkysSSqnF5JkmtiXNaYv6ea6zR6daQ9DtbOiw6yl36G61Lozt0NmVdLoZe6vxpgpvUBCv8R5Uv-PVwmQ&format=noten&ssp=10&name=Sussex_Cotillion&play=1"},{"Name":"My Lord Cutts' Delight","URL":"https://michaeleskin.com/abctools/abctools.html?def=eJx9kF1r2zAUhu_1Kw6C0O2ibqJ6ptPYhT9Sr6zp2jUX22AEWVJsL7IUJLsh4B8_ySFs3cVAHMSj57zS0Te6uJ5f36A1XR3h3lgB-dD37gIKqdq66dFXumKWNyina8tEBJXcGithkbyP0Re61LViWnyAB2P7Zugq2zL0gz6yQcEnZsXxwsGzdK41GtaDlpUxOyBz8g7eOCnhcDhE-7oJYqRl_zaC3ErWty8SctN1RjvIc8i-Xz7kl88pqJZLzaWI0IrGVzG6p4urG_Tka_xxkczRZ1qiGav4L7dxZtBia3QPWzW0As1mq7viDvbW1JZ1MD-DijkX4B_CG_8Lr1GQXoyCJH4lnRETYsOU2uwVO1aM7zaq1TuHhBxxiQUpCZQkJWOWQJqNOO0wFzzz-7QccYFvS0j9MfxH9yZMZnobnDKhIwpnBU5JQcCjgizJFDY1nek5J-MjXnY4IxkB6cspNQF-ygjxp2wvlT4J_PI9yEdMPYH_3Rfywt3h1eGK4CVhAEEEgdqXyZRhzEn8B_Bp9DDI-PM3yYm4Dg&format=noten&ssp=10&name=My_Lord_Cutts'_Delight&play=1"}];
+
+    // Populate the tunes div with options from JSON
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Select the div where the links will be inserted
+        const holder = document.getElementById('tuneShareLinkHolder');
+
+        // Create an unordered list element
+        const ul = document.createElement('ul');
+
+        // Loop through the tunes array and create list items with hyperlinks
+        tunes.forEach(tune => {
+          const li = document.createElement('li');
+          const link = document.createElement('a');
+
+          // Set the text and URL of the link
+          link.textContent = tune.Name;
+          link.href = tune.URL;
+          link.target = '_blank';  // Opens the link in a new tab
+          link.title = 'Click to play "'+tune.Name+'"';
+
+          // Append the link to the list item, and the list item to the ul
+          li.appendChild(link);
+          ul.appendChild(li);
+        });
+
+        holder.appendChild(ul);
+
+    });
+
+</script>
+
+</body>
+
+</html>
