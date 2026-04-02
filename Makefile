@@ -1,7 +1,7 @@
 publish: commit push
 	
 test: 
-	python3 -m http.server
+	cd website; python3 -m http.server
 	
 commit:
 	git add .
