@@ -1,0 +1,51 @@
+X:121
+T:Cherkessia Kfula in parts
+S:Colin Hume's website
+Q:1/2=120
+M:2/2
+L:1/4
+K:G
+V:1
+"G"dd2c|BAG2|"C"cc2d|e2e2|"G"dd2c|"G"B2A2|"D"d4|"D7"d4|
+"G"dd2c|BAG2|"C"cc2d|e2e2|"G"dd2c|"D"B2A2|"G"G4|"G7"G4||
+"C"ee2d|cde2|"G"dd2c|Bcd2|"D"cc2B|"D"A2Bc|"G"d4|"G7"d4|
+"C"ee2d|cde2|"G"dd2c|Bcd2|"D"cc2B|"D7"A2BA|"G"G4|G4||
+V:2
+"G"BB2A|GFD2|"C"GG2B|c2c2|"G"BB2A|"G"G2F2|"D"A4|"D7"A4|
+"G"BB2A|GFD2|"C"GG2B|c2c2|"G"BB2A|"D"G2F2|"G"G4|"G7"G4||
+"C"cc2d|ABc2|"G"BB2A|GAB2|"D"AA2G|"D"F2GA|"G"B4|"G7"B4|
+"C"cc2B|ABc2|"G"BB2A|GAB2|"D"AA2G|"D7"F2GF|"G"G4|"G" G4 ||
+
+X:122
+T:Cherkessia Kfula as written
+K:G
+L:1/4
+M:2/2
+P:A
+"G"[Bd][Bd]2[Ac] |[GB][FA][DG]2 | "C"[Gc][Gc]2[Bd] |[ce]2[ce]2 | "G"[Bd][Bd]2[Ac] | "G"[GB]2[FA]2 | "D"[Ad]4 | "D7"[Ad]4 |\
+"G"[Bd][Bd]2[Ac] |[GB][FA][DG]2 | "C"[Gc][Gc]2[Bd] |[ce]2[ce]2 | "G"[Bd][Bd]2[Ac] | "D"[GB]2[FA]2 | "G"[GG]4 | "G7"[GG]4 |
+P:B
+"C"[ce][ce]2[Bd] |[Ac][Bd][ce]2 | "G"[Bd][Bd]2[Ac] |[GB][Ac][Bd]2 | "D"[Ac][Ac]2[GB] | "D"[FA]2[GB][Ac] | "G"[Bd]4 | "G7"[Bd]4 |\
+"C"[ce][ce]2[Bd] |[Ac][Bd][ce]2 | "G"[Bd][Bd]2[Ac] |[GB][Ac][Bd]2 | "D"[Ac][Ac]2[GB] | "D7"[FA]2[GB][FA] | "G"[GG]4 |[GG]4 |]
+
+X:32
+T:Cherkessia Kfula - Minor version
+Q:1/2=120
+M:2/2
+L:1/4
+K:Gm
+P:A
+V:1
+K:Gm
+"Gm"[Bd][Bd]2[Ac] |[GB][^FA][DG]2 | "Cm"[Gc][Gc]2[Bd] |[ce]2[ce]2 | "Gm"[Bd][Bd]2[Ac] | "Gm"[GB]2[^FA]2 | "D7"[Ad]4 |[Ad]4 |\
+"Gm"[Bd][Bd]2[Ac] |[GB][^FA][DG]2 | "Cm"[Gc][Gc]2[Bd] |[ce]2[ce]2 | "Gm"[Bd][Bd]2[Ac] | "D7"[GB]2[^FA]2 | "Gm"[GG]4 | "G7"[GG]4 |
+V:2
+gg2f | e2d2 | cc2d | e2e2 | dg2a | b2ag | a4- | a4 |\
+bb2a | g2d2 | cc2d | e2e2 | gd2e | dc BA | G4- | G4 |
+P:B
+V:1
+"Cm"[ce][ce]2[Bd] |[Ac][Bd][ce]2 | "Gm"[Bd][Bd]2[Ac] |[GB][Ac][Bd]2 | "D7"[Ac][Ac]2[GB] | "D7"[^FA]2[GB][Ac] | "Gm"[Bd]4 | "G7"[=Bd]4 |\
+"Cm"[ce][ce]2[Bd] |[Ac][Bd][ce]2 | "Gm"[Bd][Bd]2[Ac] |[GB][Ac][Bd]2 | "D7"[Ac][Ac]2[GB] | "D7"[^FA]2[GB][FA] | "Gm"[GG]4 |[GG]4 |]
+V:2
+ee2d | cde2 | dg2a | b2b2 | aa2g | ^f2ga | b4 | =b4 |\
+c'g2f | edc2 | dg2a | b2b2 | aa2g | ^f2ga | g4 | g4 |]

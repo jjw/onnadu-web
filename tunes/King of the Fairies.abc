@@ -1,0 +1,26 @@
+X:1
+%%titlefont Palatino 18
+%%subtitlefont Palatino 13
+%%infofont Palatino 13
+%%partsfont Palatino 13
+%%tempofont Palatino 13
+%%textfont Palatino 13
+T:King of the Fairies 
+L:1/8
+M:4/4
+R:Hornpipe
+Q:2/4=72
+K:G
+%irish_rolls_on
+%abcjs_soundfont fatboy
+%%MIDI program 0
+%%MIDI bassprog 0
+%%MIDI chordprog 0
+%%MIDI bassvol 50
+%%MIDI chordvol 50
+|: B,2 | "Em" E[^DB,]EF GFGA | BcBA GFGA | B2 E2 EFGE |"D" FGFE "Bm" D2 B,2 |
+"Em" E^DEF "D" GFGA | "G"BAGB d3 c | "Em" B2 E2 "D" GFED | "Em" E2 ED E2 :|
+(3B^cd |"Em" e2 B2 Bdef | gagf e2 ef |e2 B2 BAB^c | "D" ded^c "Bm" Bc (3dcB |
+"Em" e2 B2 Bdef | gagf efed |Bd (3efg "D" fe (3def | "Em" e2 ed e2 ef ||
+"G"g3 e "D" f3 d | "Em" edB^c "D" d2 de |dBAF "G" GAB^c | "D" dBAF GFED |
+"Em" B,2 E2 EFGA | B2 e2 edef | e2 B2 "D" BAGF | "Em" E2 ED E2 |]
